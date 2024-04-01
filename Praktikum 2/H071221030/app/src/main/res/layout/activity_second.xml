@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity">
+
+    <FrameLayout
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="#00FFF7">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:fontFamily="sans-serif-black"
+            android:text="Tugas Praktikum 2"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:layout_below="@+id/appName"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editNote1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Write first note..."/>
+
+        <EditText
+            android:id="@+id/editNote2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Write second note..."/>
+
+        <Button
+            android:id="@+id/nextScene"
+            android:layout_width="336dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Next >" />
+
+    </LinearLayout>
+
+</RelativeLayout>
