@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gradient_purple_red">
+        <gradient android:startColor="#663399" android:endColor="#FF0000" android:type="linear" />
+    </color>
+    <color name="gradient_yellow_red">
+        <gradient android:startColor="#FFFF00" android:endColor="#FF0000" android:type="radial" />
+    </color>
+</resources>
