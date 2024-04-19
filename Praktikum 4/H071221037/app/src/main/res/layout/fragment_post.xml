@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostFragment"
+    android:orientation="vertical"
+    android:layout_marginTop="25dp"
+    android:background="@color/color_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewPost"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Add Post"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:background="@color/color_main"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="17dp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="358dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:hint="Masukkan Name"
+        tools:text="Masukkan Name"
+        android:background="@drawable/card"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/textViewNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nickname"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="17dp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/editTextNickname"
+        android:layout_width="358dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:hint="Masukkan Nickname"
+        tools:text="Masukkan Nickname"
+        android:background="@drawable/card"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/textViewContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Konten"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="17dp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Masukkan Konten"
+        tools:text="Masukkan Konten"
+        android:background="@drawable/card"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        style="@style/WrapContentEditText"/>
+
+    <TextView
+        android:id="@+id/textViewChoiseImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Gambar"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="17dp"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/card_image"
+        android:src="@drawable/image"
+        android:layout_gravity="center"
+        android:onClick="selectImage"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="POSTING"
+        android:backgroundTint="@color/color_main"/>
+</LinearLayout>
