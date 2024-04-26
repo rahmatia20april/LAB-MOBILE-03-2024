@@ -59,28 +59,14 @@ public class SearchFragment extends Fragment {
             }
             @Override
             public boolean onQueryTextChange(String newText) {
-                executor.execute(() -> {
-                    new Thread(() -> {
-                        try {
-                            for (int i = 0; i <= 1; i++){
-                                int finalI = i;
-                                handler.post(() -> {
-                                    if (finalI == 1){
-                                        progressLayout.setVisibility(View.GONE);
-                                        linearLayout.setVisibility(View.VISIBLE);
-                                        searchAdapter.getFilter().filter(newText);
-                                    } else {
-                                        linearLayout.setVisibility(View.GONE);
-                                        progressLayout.setVisibility(View.VISIBLE);
-                                    }
-                                });
-                                Thread.sleep(1000);
-                            }
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
-                    }).start();
-                });
+                handler.removeCallbacksAndMessages(null);
+                linearLayout.setVisibility(View.GONE);
+                progressLayout.setVisibility(View.VISIBLE);
+                handler.postDelayed(() -> {
+                    progressLayout.setVisibility(View.GONE);
+                    linearLayout.setVisibility(View.VISIBLE);
+                    searchAdapter.getFilter().filter(newText);
+                }, 1000);
                 return false;
             }
         });

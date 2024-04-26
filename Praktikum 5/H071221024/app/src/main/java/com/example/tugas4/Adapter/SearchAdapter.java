@@ -25,7 +25,7 @@ import java.util.List;
 
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
-    private ArrayList<Profile> searchProfiles;
+    public static ArrayList<Profile> searchProfiles;
 
     @NonNull
     @Override
@@ -59,6 +59,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         protected FilterResults performFiltering(CharSequence constraint) {
             searchProfiles = DataSource.generateDummyProfiles();
             List<Profile> filteredList = new ArrayList<>();
+            FilterResults results = new FilterResults();
 
             if (constraint.length() != 0) {
                 String filterPattern = constraint.toString().toLowerCase().trim();
@@ -70,8 +71,6 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
                     }
                 }
             }
-
-            FilterResults results = new FilterResults();
             results.values = filteredList;
             return results;
         }
@@ -81,6 +80,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         protected void publishResults(CharSequence constraint, FilterResults results) {
             searchProfiles.clear();
             searchProfiles.addAll((List) results.values);
+//            System.out.println(searchProfiles);
             SearchFragment.searchAdapter.notifyDataSetChanged();
         }
     };
