@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/post_bg"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="20dp"
+    android:layout_marginTop="10dp"
+    android:id="@+id/list_view">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_list"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        tools:src="@drawable/antony_profile"/>
+    <LinearLayout
+        android:id="@+id/list_item"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/username_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Antony"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/fullname_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Antony Matheus Dos Santos"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</LinearLayout>
