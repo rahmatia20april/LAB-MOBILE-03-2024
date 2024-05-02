@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Activity.ProfileActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="@color/white"
+        android:paddingStart="20dp"
+        android:textSize="18dp"
+        android:paddingVertical="15dp"
+        android:background="#060B21"/>
     <LinearLayout
         android:visibility="gone"
         android:id="@+id/progress_layout"
@@ -24,15 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:textColor="@color/white"
-            android:paddingStart="20dp"
-            android:textSize="18dp"
-            android:paddingVertical="15dp"
-            android:background="#060B21"/>
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

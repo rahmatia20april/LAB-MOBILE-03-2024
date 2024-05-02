@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.example.tugas4.Adapter.SearchAdapter;
 import com.example.tugas4.R;
 
 import java.util.concurrent.ExecutorService;
@@ -33,7 +34,7 @@ public class ProfileActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
 
         Handler handler = new Handler(Looper.getMainLooper());
-        ExecutorService executor = Executors.newSingleThreadExecutor();
+        ExecutorService executor = Executors.newFixedThreadPool(SearchAdapter.searchProfiles.size());
 
         LinearLayout progressLayout = findViewById(R.id.progress_layout);
         LinearLayout linearLayout = findViewById(R.id.profile_layout);
@@ -41,8 +42,9 @@ public class ProfileActivity extends AppCompatActivity {
         executor.execute(() -> {
             new Thread(() -> {
                 try {
-                    for(int i = 0; i <= 1; i++){
+                    for (int i = 0; i <= 1; i++){
                         int finalI = i;
+                        Thread.sleep(1000);
                         handler.post(() -> {
                             if (finalI == 1){
                                 progressLayout.setVisibility(View.GONE);
@@ -59,7 +61,6 @@ public class ProfileActivity extends AppCompatActivity {
                                 progressLayout.setVisibility(View.VISIBLE);
                             }
                         });
-                        Thread.sleep(1000);
                     }
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
