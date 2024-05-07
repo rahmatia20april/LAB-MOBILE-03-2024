@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <!-- Atur warna, font, dan atribut lain yang sesuai dengan tema terang -->
+    </style>
+
+    <!-- Tema untuk mode gelap -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        <!-- Atur warna, font, dan atribut lain yang sesuai dengan tema gelap -->
+    </style>
+
+</resources>
