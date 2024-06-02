@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="search_view" type="id" />
+    <item name="recycler_view" type="id" />
+    <item name="homebtn" type="id" />
+    <item name="searchbtn" type="id" />
+    <item name="postbtn" type="id" />
+    <item name="profilebtn" type="id" />
+</resources>
